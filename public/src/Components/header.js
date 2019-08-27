@@ -6,7 +6,7 @@ class Header extends Component {
 
         return /*html*/`
             <header>
-                <h1>TO DO LIST</h1>
+                <h1>${title}</h1>
             </header>
             `;
     }
