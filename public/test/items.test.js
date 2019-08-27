@@ -13,9 +13,9 @@ test('renders', assert => {
 
     const expected = /*html*/ `
     <li>
-    <p class="\">
+        <p class="">
         Stuff
-    </p>
+        </p>
     <button class="incomplete-button">incomplete</button>
     <button class="remove-button">🗑️</button>
     </li>
