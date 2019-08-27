@@ -1,0 +1,40 @@
+header {
+    background-color: #36454f;
+    height: 20vh;
+    width: 100%;
+    display: flex;
+    text-align: center;
+    flex-direction: column;
+};
+
+main{
+    width: 100%;
+    display: flex;
+    background-color: #696969;
+}
+
+ul{
+    display: flex;
+    list-style: none;
+    border: 2px #36454f solid;
+    width: 50vw;
+    height: 40vw;
+    flex-direction: column;
+    justify-content: top;
+    box-shadow: 10px 10px 10px #36454f;
+
+}
+
+button {
+    border-radius: 15px;
+
+}
+
+button:focus{ 
+    outline: none;
+}
+
+.form-container {
+    margin-left: 500px;
+    margin-top: 50px;
+}
