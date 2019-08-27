@@ -1,4 +1,4 @@
-import Component from '../types/Component.js';
+import Component from './types/Component.js';
 
 class Header extends Component {
     renderHTML() {

@@ -14,33 +14,36 @@
         <h1>TO DO LIST</h1>
     </header>
     <main>
-        <div class="form-container">
-            <input type="text">
-            <button>ADD</button>
-        </div>
-            <ul>
-                <li>
-                    <p class="thing">
-                        Stuff
-                    </p>
-                    <button class="incomplete-button">Incomplete</button>
-                    <button class="remove-button">🗑️</button>
-                </li>
-                <li>
-                    <p>
-                        Things
-                    </p>
-                    <button>Incomplete</button>
-                    <button>🗑️</button>
-                </li>
-                <li>
-                    <p>
-                        More Things
-                    </p>
-                    <button>Incomplete</button>
-                    <button>🗑️</button>
-                </li>
-            </ul>
+        <section class="item-form-section">
+            <form class="item-form">
+                <input type="input" required>
+                <button>ADD</button>
+            </form>
+            <p class="error"></p>
+        </section>
+        <ul>
+            <li>
+                <p class="thing">
+                    Stuff
+                </p>
+                <button class="incomplete-button">Incomplete</button>
+                <button class="remove-button">🗑️</button>
+            </li>
+            <li>
+                <p>
+                    Things
+                </p>
+                <button>Incomplete</button>
+                <button>🗑️</button>
+            </li>
+            <li>
+                <p>
+                    More Things
+                </p>
+                <button>Incomplete</button>
+                <button>🗑️</button>
+            </li>
+        </ul>
     </main>
 </body>
 
