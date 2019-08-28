@@ -4,7 +4,7 @@ class SignUp extends Component {
 
     onRender(form) {
         const onSignUp = this.props.onSignUp;
-
+        
         form.addEventListener('submit', event => {
             event.preventDefault();
 
@@ -15,7 +15,6 @@ class SignUp extends Component {
                 email: formData.get('email'),
                 password: formData.get('password')
             };
-
             onSignUp(user);
         });
     }

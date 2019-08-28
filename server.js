@@ -3,9 +3,8 @@ require('dotenv').config();
 const express = require('express');
 const cors = require('cors');
 const morgan = require('morgan');
-const client = require('./lib/client');
 
-client.connect();
+const client = require('./lib/client');
 
 const ensureAuth = require('./lib/auth/ensure-auth');
 const createAuthRoutes = require('./lib/auth/create-auth-routes');
@@ -24,7 +23,7 @@ const authRoutes = createAuthRoutes({
             INSERT into users (email, hash, display_name)
             VALUES ($1, $2, $3)
             RETURNING id, email, display_name as "displayName"
-        `, 
+        `,
         [user.email, hash, user.displayName]
         ).then(result => result.rows[0]);
     }
@@ -56,8 +55,8 @@ app.get('/api/items', (req, res) => {
         .then(result => {
             res.json(result.rows);
         })
-        .catch (err => {
-            res.status(500).json ({
+        .catch(err => {
+            res.status(500).json({
                 error: err.message || err
             });
         });
@@ -75,7 +74,7 @@ app.post('/api/items', (req, res) => {
             res.json(result.rows[0]);
         })
         .catch(err => {
-            if(err.code === '23505'){
+            if(err.code === '23505') {
                 res.status(400).json({
                     error: `Item "${item.name}" already exists`
                 });
@@ -89,14 +88,13 @@ app.post('/api/items', (req, res) => {
 app.put('/api/items/:id', (req, res) => {
     const id = req.params.id;
     const item = req.body;
-    console.log(req.body);
     client.query(`
         UPDATE items
         SET name = $2,
             incomplete = $3
         WHERE id = $1
         RETURNING *;
-    `, 
+    `,
     [id, item.name, item.incomplete]
     )
         .then(result => {
@@ -137,6 +135,12 @@ app.delete('/api/items/:id', (req, res) => {
                 error: err.message || err
             });
         });
+});
+
+app.get('/api/test', (req, res) => {
+    res.json({
+        message: `the user's id is ${req.userId}`
+    });
 });
 
 app.listen(PORT, () => {

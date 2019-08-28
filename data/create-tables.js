@@ -1,8 +1,6 @@
 const client = require('../lib/client');
 
-client.connect()
-    .then(() => {
-        return client.query(`
+client.query(`
         CREATE TABLE users (
             id SERIAL PRIMARY KEY,
             email VARCHAR(256) NOT NULL,
@@ -15,8 +13,7 @@ client.connect()
             name VARCHAR(256) NOT NULL UNIQUE,
             incomplete BOOLEAN NOT NULL DEFAULT FALSE
         );
-        `);
-    })
+        `)
     .then(
         () => console.log('create tables complete'),
         err => console.log(err)
