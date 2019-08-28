@@ -1,7 +1,7 @@
 import Component from '../types/Component.js';
 
 class SignIn extends Component {
-    
+
     onRender(form) {
         const onSignIn = this.props.onSignIn;
 
@@ -10,11 +10,11 @@ class SignIn extends Component {
 
             const formData = new FormData(form);
 
-            const credents = {
+            const credentials = {
                 email: formData.get('email'),
                 password: formData.get('password')
             };
-            onSignIn(credents);
+            onSignIn(credentials);
         });
     }
 

@@ -36,10 +36,10 @@ class AuthApp extends Component {
         signUpContainer.appendChild(signUp.renderDOM());
 
         const signIn = new SignIn({
-            onSignIn: credents => {
+            onSignIn: credentials => {
                 errors.textContent = '';
 
-                return userSignIn(credents)
+                return userSignIn(credentials)
                     .then(user => {
                         success(user);
                     })
@@ -51,7 +51,7 @@ class AuthApp extends Component {
         signInContainer.appendChild(signIn.renderDOM());
 
         const switchToSignIn = dom.querySelector('#signin-button');
-        
+
         switchToSignIn.addEventListener('click', () => {
             signInContainer.classList.remove('no-display');
             signUpContainer.classList.add('no-display');

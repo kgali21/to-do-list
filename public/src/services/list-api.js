@@ -70,20 +70,20 @@ export function signUp(user) {
 
     return fetchWithError(url, {
         method: 'POST',
-        header: {
+        headers: {
             'Content-Type': 'application/json'
         },
         body: JSON.stringify(user)
     });
 }
 
-export function signIn(credents) {
+export function signIn(credentials) {
     const url = `${URL}/auth/signin`;
     return fetchWithError(url, {
         method: 'POST',
         headers: {
             'Content-Type': 'application/json',
         },
-        body: JSON.stringify(credents)
+        body: JSON.stringify(credentials)
     });
 }
