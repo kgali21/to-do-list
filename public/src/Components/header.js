@@ -7,6 +7,9 @@ class Header extends Component {
         return /*html*/`
             <header>
                 <h1>${title}</h1>
+                <nav>
+                <a href="./auth.html">| Log In/Create Account |</a>
+                </nav>
             </header>
             `;
     }
