@@ -8,7 +8,7 @@ import store from '../../services/store.js';
 function success(user) {
     store.setToken(user.token);
     const searchParams = new URLSearchParams(location.search);
-    location = searchParams.get('redirect' || './index.html');
+    location = searchParams.get('redirect') || './index.html';
 }
 
 class AuthApp extends Component {
