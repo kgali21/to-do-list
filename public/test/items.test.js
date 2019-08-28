@@ -12,6 +12,7 @@ test('renders', assert => {
     };
 
     const expected = /*html*/ `
+    
     <li>
         <p class="">
         Stuff
@@ -35,6 +36,7 @@ test('render', assert => {
     };
 
     const expected = /*html*/`
+    
     <li>
     <p class="incomplete">
         Things

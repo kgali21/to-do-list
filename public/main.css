@@ -1,4 +1,4 @@
-çheader {
+header {
     background-color: #36454f;
     height: 20vh;
     width: 100%;
@@ -22,7 +22,7 @@ ul{
     flex-direction: column;
     justify-content: top;
     box-shadow: 10px 10px 10px #36454f;
-
+    overflow: scroll;
 }
 
 button {

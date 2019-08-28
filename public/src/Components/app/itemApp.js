@@ -68,8 +68,8 @@ class ItemTypesApp extends Component {
     renderHTML() {
         return /*html*/ `
         <div>
-        
             <main>
+            
             </main>
         </div>
         `;

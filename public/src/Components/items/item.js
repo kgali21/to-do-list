@@ -25,7 +25,6 @@ class Item extends Component {
         const item = this.props.item;
 
         return /*html*/ `
-            <div>
                 <li>
                     <p class="${item.incomplete ? 'incomplete' : ''}">
                         ${item.name}
@@ -33,7 +32,6 @@ class Item extends Component {
                     <button class="incomplete-button">${item.incomplete ? 'complete' : 'incomplete'}</button>
                     <button class="remove-button">🗑️</button>
                 </li>
-            </div>
         `;
     }
 }
