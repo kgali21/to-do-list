@@ -32,7 +32,7 @@ export function addItem(item) {
 }
 
 export function updateItem(item) {
-    const url = `${URL}/types/${item.id}`;
+    const url = `${URL}/items/${item.id}`;
     return fetchWithError(url, {
         method: 'PUT',
         headers: {

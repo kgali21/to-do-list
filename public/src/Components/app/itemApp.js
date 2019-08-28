@@ -7,7 +7,7 @@ import { getItems, addItem, updateItem, removeItem } from '../../services/list-a
 class ItemTypesApp extends Component {
 
     onRender(dom) {
-        const header = new Header();
+        const header = new Header({ title: 'To Do List' });
         dom.prepend(header.renderDOM());
 
         const main = dom.querySelector('main');
@@ -20,7 +20,7 @@ class ItemTypesApp extends Component {
 
                         const items = this.state.items;
                         items.push(saved);
-                        ItemList.update({ items });
+                        itemList.update({ items });
                     });
             }
         });
@@ -32,7 +32,7 @@ class ItemTypesApp extends Component {
 
                 return updateItem(item)
                     .then(update => {
-                        const items = this.stat.items;
+                        const items = this.state.items;
 
                         const index = items.indexOf(items);
                         items.splice(index, 1, update);
@@ -46,7 +46,7 @@ class ItemTypesApp extends Component {
                         const items = this.state.items;
 
                         const index = items.indexOf(item);
-                        items.spline(index, 1);
+                        items.splice(index, 1);
 
                         itemList.update({ items });
                     });
@@ -54,7 +54,7 @@ class ItemTypesApp extends Component {
         });
         main.appendChild(itemList.renderDOM());
 
-        getItems({ showAl: true })
+        getItems({ showAll: true })
             .then(items => {
                 this.state.items = items;
                 itemList.update({ items });
@@ -68,6 +68,7 @@ class ItemTypesApp extends Component {
     renderHTML() {
         return /*html*/ `
         <div>
+        
             <main>
             </main>
         </div>

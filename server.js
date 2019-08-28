@@ -21,7 +21,7 @@ app.get('/api/items', (req, res) => {
     client.query(`
         SELECT 
             id,
-            name'
+            name,
             incomplete
         FROM items
         ${where}
@@ -63,7 +63,7 @@ app.post('/api/items', (req, res) => {
 app.put('/api/items/:id', (req, res) => {
     const id = req.params.id;
     const item = req.body;
-
+    console.log(req.body);
     client.query(`
         UPDATE items
         SET name = $2,

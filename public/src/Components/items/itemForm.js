@@ -4,12 +4,12 @@ class ItemForm extends Component {
     onRender(dom) {
         const onAdd = this.props.onAdd;
         const form = dom.querySelector('form');
-        const input = dom.querySelector('input[name=type]');
+        const input = dom.querySelector('input');
         const error = dom.querySelector('p.error');
 
         form.addEventListener('submit', event => {
             event.preventDefault();
-
+            console.log(input);
             const itemStuff = {
                 name: input.value
             };

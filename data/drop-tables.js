@@ -4,7 +4,7 @@ client.connect()
     .then(() => {
         return client.query(`
            DROP TABLE IF EXISTS items
-        );
+        ;
         `);
     })
     .then(
