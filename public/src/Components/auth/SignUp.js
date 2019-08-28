@@ -25,7 +25,7 @@ class SignUp extends Component {
         <form class="auth-form">
             <p>
                 <label for="name">Name</label>
-                <input id="name" name="name" required placeholder="username@email.com">
+                <input id="name" name="name" required placeholder="Display Name">
             </p>
             <p>
                 <label for="email">Email</label>
