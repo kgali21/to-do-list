@@ -8,6 +8,7 @@ class Header extends Component {
             <header>
                 <h1>${title}</h1>
                 <nav>
+                <a href="./index.html">| List Page</a>
                 <a href="./auth.html">| Log In/Create Account |</a>
                 </nav>
             </header>

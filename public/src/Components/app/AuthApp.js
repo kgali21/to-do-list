@@ -55,8 +55,7 @@ class AuthApp extends Component {
             signInContainer.classList.remove('no-display');
             signUpContainer.classList.add('no-display');
         });
-        console.log(switchToSignIn);
-
+        
         const switchToSignUp = dom.querySelector('#signup-button');
         switchToSignUp.addEventListener('click', () => {
             signUpContainer.classList.remove('no-display');
