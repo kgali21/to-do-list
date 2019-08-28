@@ -13,7 +13,7 @@ function success(user) {
 
 class AuthApp extends Component {
     onRender(dom) {
-        const header = new Header();
+        const header = new Header({ title: 'Log In' });
         dom.prepend(header.renderDOM());
 
         const errors = dom.querySelector('.errors');
@@ -55,7 +55,7 @@ class AuthApp extends Component {
             signInContainer.classList.remove('no-display');
             signUpContainer.classList.add('no-display');
         });
-        
+
         const switchToSignUp = dom.querySelector('#signup-button');
         switchToSignUp.addEventListener('click', () => {
             signUpContainer.classList.remove('no-display');
