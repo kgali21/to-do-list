@@ -51,7 +51,7 @@ app.post('/api/items', (req, res) => {
         .catch(err => {
             if(err.code === '23505'){
                 res.status(400).json({
-                    error: `Type "${item.name}" already exists`
+                    error: `Item "${item.name}" already exists`
                 });
             }
             res.status(500).json({

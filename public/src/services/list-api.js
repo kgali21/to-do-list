@@ -48,3 +48,25 @@ export function removeItem(id) {
         method: 'DELETE'
     });
 }
+
+export function signUp(user) {
+    const url = `${URL}/auth/signup`;
+    return fetchWithError(url, {
+        method: 'POST',
+        header: {
+            'Content-Type': 'application/json'
+        },
+        body: JSON.stringify(user)
+    });
+}
+
+export function signIn(credents) {
+    const url = `${URL}/auth/signin`;
+    return fetchWithError(url, {
+        method: 'POST',
+        headers: {
+            'Content-Type': 'application/json',
+        },
+        body: JSON.stringify(credents)
+    });
+}
